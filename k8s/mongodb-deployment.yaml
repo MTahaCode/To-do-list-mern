@@ -14,7 +14,7 @@ spec:
     metadata:
       labels:
         app: mongo
-    specs:
+    spec:
       containers:
         - name: mongo-container
           image: mongo
