@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: todo-frontend
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: todo-frontend
+
+  template:
+    metadata:
+      labels:
+        app: todo-frontend
+    spec:
+      containers:
+        - name: frontend-container
+        image: taha664/todo-app-frontend
+        ports:
+          - containerPort: 3000
