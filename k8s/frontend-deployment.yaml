@@ -19,4 +19,4 @@ spec:
         - name: frontend-container
           image: taha664/todo-app-frontend
           ports:
-            - containerPort: 3000
+            - containerPort: 80
