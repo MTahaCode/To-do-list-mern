@@ -17,11 +17,11 @@ spec:
     spec:
       containers:
         - name: backend-container
-        image: taha664/todo-app-backend
-        ports:
-          - containerPort: 80
-        env:
-          - name: MONGODB_URI
-            value: mongodb://root:example@mongo-service:27017/todos
-          - name: PORT
-            value: "3000"
+          image: taha664/todo-app-backend
+          ports:
+            - containerPort: 80
+          env:
+            - name: MONGODB_URI
+              value: mongodb://root:example@mongo-service:27017/todos
+            - name: PORT
+              value: "3000"

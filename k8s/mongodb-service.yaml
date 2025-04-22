@@ -9,6 +9,6 @@ spec:
     app: mongo
   ports:
     - protocol: TCP
-    port: 27017
-    targetPort: 27017
+      port: 27017
+      targetPort: 27017
   type: ClusterIP
