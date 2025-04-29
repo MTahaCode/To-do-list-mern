@@ -1,27 +1,17 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 
 metadata:
-  name: todo-backend
+  name: backend
+  labels:
+    name: backend
 
 spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: todo-backend
-  
-  template:
-    metadata:
-      labels:
-        app: todo-backend
-    spec:
-      containers:
-        - name: backend-container
-          image: taha664/todo-app-backend
-          ports:
-            - containerPort: 80
-          env:
-            - name: MONGODB_URI
-              value: mongodb://root:example@mongo-service:27017/todos
-            - name: PORT
-              value: "3000"
+  containers:
+    - name: backend
+      image: taha664/todo-app-backend
+      ports:
+        - containerPort: 5000
+      env:
+        - name: MONGODB_URI
+          value: "mongodb://taha:taha@mongodb:27017"

@@ -2,13 +2,13 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: express-backend-service
+  name: backend-service
 
 spec:
+  type: ClusterIP
   selector:
-    app: todo-backend
+    name: backend
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: ClusterIP
+      port: 5000
+      targetPort: 5000
