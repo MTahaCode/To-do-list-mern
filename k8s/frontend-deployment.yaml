@@ -9,13 +9,13 @@ spec:
   selector:
     matchLabels:
       app: frontend
-    template:
-      metadata:
-        labels:
-          app: frontend
-      spec:
-        containers:
-          - name: frontend
-            image: taha664/todo-app-frontend
-            ports:
-              - containerPort: 80
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: taha664/todo-app-frontend
+          ports:
+            - containerPort: 80
