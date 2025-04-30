@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: frontend
+  labels:
+    name: frontend
+
+spec:
+  containers:
+    - name: frontend
+      image: taha664/todo-app-frontend
+      ports:
+        - containerPort: 80
+      env:
+        - name: VITE_API_URL
+          value: "http://backend-service:5000"
