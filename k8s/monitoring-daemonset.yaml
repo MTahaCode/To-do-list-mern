@@ -12,9 +12,9 @@ spec:
     metadata:
       labels:
         name: monitoring-agent
-      spec:
-        containers:
-          - name: monitoring-agent
-            image: nginx
-            ports:
-              - containerPort: 80
+    spec:
+      containers:
+        - name: monitoring-agent
+          image: nginx
+          ports:
+            - containerPort: 80
